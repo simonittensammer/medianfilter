@@ -78,18 +78,18 @@ export class AppComponent {
         });
 
         // median filter
-        // pixelList[pix] = medianPixel[4];
-        // pixelList[pix + 1] = medianPixel[4];
-        // pixelList[pix + 2] = medianPixel[4];
+        pixelList[pix] = medianPixel[4];
+        pixelList[pix + 1] = medianPixel[4];
+        pixelList[pix + 2] = medianPixel[4];
 
         // weichzeichnungsfilter
-        let sum = 0;
-        medianPixel.forEach(value => {
-          sum += value;
-        });
-        pixelList[pix] = sum / 9;
-        pixelList[pix + 1] = sum / 9;
-        pixelList[pix + 2] = sum / 9;
+        // let sum = 0;
+        // medianPixel.forEach(value => {
+        //   sum += value;
+        // });
+        // pixelList[pix] = sum / 9;
+        // pixelList[pix + 1] = sum / 9;
+        // pixelList[pix + 2] = sum / 9;
       }
     }
     ctx.putImageData(imgd, 0, 0);
